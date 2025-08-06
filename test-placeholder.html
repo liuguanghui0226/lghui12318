@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片占位符测试页面</title>
+    <link rel="stylesheet" href="css/knowledge.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>图片占位符测试页面</h1>
+        
+        <div class="content-section">
+            <div class="text-content">
+                <h2>测试1：没有背景图片的占位符</h2>
+                <p>这个占位符没有设置background-image，应该显示我们在CSS中设置的渐变背景和居中效果。</p>
+            </div>
+            <div class="image-content">
+                <div class="image-placeholder solar">
+                    <i class="fas fa-sun"></i>
+                    <p>太阳辐射示意图</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="text-content">
+                <h2>测试2：有背景图片的占位符</h2>
+                <p>这个占位符设置了background-image，应该显示真实图片，并且图片应该是150%大小居中显示。</p>
+            </div>
+            <div class="image-content">
+                <div class="image-placeholder earth" style="background-image: url('https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+                    <div class="image-overlay">
+                        <i class="fas fa-globe"></i>
+                        <p>地球自转示意图</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="text-content">
+                <h2>测试3：不同类型的占位符</h2>
+                <p>测试不同类型的占位符颜色效果。</p>
+            </div>
+            <div class="image-content">
+                <div class="image-placeholder atmosphere">
+                    <i class="fas fa-cloud"></i>
+                    <p>大气环流示意图</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+        
+        .text-content h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .text-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</body>
+</html>
